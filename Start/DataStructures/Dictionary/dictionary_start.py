@@ -24,5 +24,7 @@ print(dictionary.keys())
 print(dictionary.values())
 print(dictionary2.keys())
 print(dictionary2.values())
-print(dictionary3.keys())
-print(dictionary3.values())
+
+
+
+print(dictionary3.items())
