@@ -6,15 +6,14 @@
 items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 
 def find_max(items):
-    pass
-    # TODO: breaking condition: last item in list? return it
-
-
-    # TODO: otherwise get the first item and call function
-    # again to operate on the rest of the list
-
-
-    # TODO: perform the comparison when we're down to just two
+    if (len(items) == 1):
+        return items[0]
+    val1 = items[0]
+    val2 = find_max(items[1:])
+    if val1 > val2:
+        return val1
+    else:
+        return val2
 
 
 
