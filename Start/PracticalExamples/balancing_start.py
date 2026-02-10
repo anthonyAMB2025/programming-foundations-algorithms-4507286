@@ -3,7 +3,25 @@
 
 
 def is_balanced(thestr):
-    # TODO: Your code goes here
+    strStack = []
+    for c in thestr:
+        if c in ['(','{','[']:
+            strStack.append(c)
+
+        if c in [')','}',']']:
+            if len(strStack) == 0:
+                return False
+        
+            test = strStack.pop()
+            if test == ')' and c != '(':
+                return False
+            if test == ']' and c != '[':
+                return False
+            if test == '}' and c != '{':
+                return False
+            
+    if len(strStack) > 0: 
+        return False
                 
     return True
 
